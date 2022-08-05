@@ -6,6 +6,9 @@ ApplicationWindow {
     width: 400  
     height: 600
     title: "Personal Agenda"
+
+    property string currTime: "00:00:00"
+    property QtObject backend
     
     Rectangle {
         anchors.fill: parent
@@ -18,6 +21,14 @@ ApplicationWindow {
             fillMode: Image.PreserveAspectCrop
         }
 
+    Connections {
+        target: backend
+
+        function onUpdated(msg){
+            currTime = msg;
+        }
+    }
+
     Rectangle {
         anchors.fill: parent
         color: "transparent"
@@ -29,9 +40,9 @@ ApplicationWindow {
                 left: parent.left
                 leftMargin: 12
             }    
-        text: "Sweet Home Alabama"
-        font.pixelSize: 24
-        color: "Black"
+        text: currTime
+        font.pixelSize: 48
+        color: "White"
         }
     }
 }
