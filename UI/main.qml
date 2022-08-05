@@ -12,7 +12,6 @@ ApplicationWindow {
     
     Rectangle {
         anchors.fill: parent
-    }
 
         Image {
             sourceSize.width: parent.width
@@ -20,6 +19,7 @@ ApplicationWindow {
             source: "Images/backround.png"
             fillMode: Image.PreserveAspectCrop
         }
+    }
 
     Connections {
         target: backend
@@ -43,6 +43,36 @@ ApplicationWindow {
         text: currTime
         font.pixelSize: 48
         color: "White"
+        }
+    }
+
+    Rectangle {
+        anchors.fill: parent
+        color: "transparent"
+
+        ListView {
+            id: listview
+
+            width: 400; height: 250
+            snapMode: ListView.SnapOneItem
+            orientation: ListView.Vertical
+            highlightRangeMode: ListView.StrictlyEnforceRange
+
+            model: CalendarModel {
+                from: new Date(2022, 0, 1)
+                to: new Date(2022, 11, 31)
+            }
+
+            delegate: MonthGrid {
+                width: listview.width
+                height: listview.height
+
+                month: model.month
+                year: model.year
+                locale: Qt.locale("ES")
+            }
+
+            ScrollIndicator.horizontal: ScrollIndicator { }
         }
     }
 }
