@@ -14,7 +14,7 @@ ApplicationWindow {
         Image {
             sourceSize.width: parent.width
             sourceSize.height: parent.height
-            source: "./Images/backround.jpeg"
+            source: "Images/backround.png"
             fillMode: Image.PreserveAspectCrop
         }
 
@@ -22,7 +22,13 @@ ApplicationWindow {
         anchors.fill: parent
         color: "transparent"
 
-        Text {    
+        Text {
+            anchors {
+                bottom: parent.bottom
+                bottomMargin: 12
+                left: parent.left
+                leftMargin: 12
+            }    
         text: "Sweet Home Alabama"
         font.pixelSize: 24
         color: "Black"
