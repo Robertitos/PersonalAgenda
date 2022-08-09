@@ -276,9 +276,11 @@ Rectangle {
                     acceptedButtons: Qt.NoButton
                 }
             }
+            
             onClicked: (date)=> {
-                           control.selectDate=date;
-                           console.log(date.getUTCDate(), month_grid.title)
+                            var escribefecha = (date.getUTCDate(), month_grid.title)
+                            control.selectDate=date;
+                            console.log(escribefecha)
 
                             var component = Qt.createComponent("date.qml");
                             var asdf = component.createObject(month_grid);
