@@ -278,7 +278,7 @@ Rectangle {
             }
             onClicked: (date)=> {
                            control.selectDate=date;
-                           console.log('click', date.getUTCDate(), month_grid.title)
+                           console.log(date.getUTCDate(), month_grid.title)
                        }
         }
     }
