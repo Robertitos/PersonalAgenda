@@ -278,8 +278,7 @@ Rectangle {
             }
             onClicked: (date)=> {
                            control.selectDate=date;
-                           console.log('click',month_grid.title,month_grid.year,month_grid.month,"--",
-                                       date.getUTCFullYear(),date.getUTCMonth(),date.getUTCDate(),date.getUTCDay())
+                           console.log('click', date.getUTCDate(), month_grid.title)
                        }
         }
     }
