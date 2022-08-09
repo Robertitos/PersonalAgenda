@@ -279,6 +279,10 @@ Rectangle {
             onClicked: (date)=> {
                            control.selectDate=date;
                            console.log(date.getUTCDate(), month_grid.title)
+
+                            var component = Qt.createComponent("date.qml");
+                            var asdf = component.createObject(month_grid);
+                            asdf.show();
                        }
         }
     }
