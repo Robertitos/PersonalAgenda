@@ -8,6 +8,7 @@ ApplicationWindow {
     width: 400  
     height: 600
     title: "Personal Agenda"
+    
 
     property string currTime: "00:00:00"
     property QtObject backend
