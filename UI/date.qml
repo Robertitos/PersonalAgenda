@@ -22,21 +22,21 @@ ApplicationWindow {
         }
     }
 
-    Rectangle {
+    ListModel { id: listaQuehaceres }
         anchors.fill: parent
-        color: "transparent"
+        anchors.margins: 10
+              
 
-        Text {
-            anchors {
-                bottom: parent.bottom
-                bottomMargin: 12
-                left: parent.left
-                leftMargin: 12
-            }    
-        text: currTime
-        font.pixelSize: 48
-        color: "White"
-        }
+        RowLayout{
+            Layout.fillWidth: true
+            spacing: 10
+            z: 1
+            TextArea {
+                id: todoInputField
+            Button {
+                Layout.preferredWidth: 90
+                Layout.preferredHeight: 40
+                }
     }
 
     TextArea{
