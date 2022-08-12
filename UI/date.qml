@@ -54,6 +54,7 @@ ApplicationWindow {
     }
 
     Rectangle{
+        id: submitBtn
         width: 90
         height: 40
         color: "#9de1ed"
@@ -70,6 +71,12 @@ ApplicationWindow {
             rightMargin: 12
             bottom: parent.bottom
             bottomMargin: 20
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked:{
+                parent.color = "Black"
+            }
         }
 
     }
