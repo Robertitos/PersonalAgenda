@@ -280,10 +280,10 @@ Rectangle {
             onClicked: (date)=> {
                             var escribefecha = (date.getUTCDate(), month_grid.title)
                             control.selectDate=date;
-                            console.log(escribefecha)
+                            console.log(date.getUTCDate(), month_grid.title)
 
                             var component = Qt.createComponent("date.qml");
-                            var asdf = component.createObject(month_grid);
+                            var asdf = component.createObject();
                             asdf.show();
                        }
         }
