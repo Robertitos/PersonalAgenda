@@ -9,7 +9,6 @@ ApplicationWindow {
     height: 600
     title: "hola"
 
-    property string currTime: "caracola"
     property QtObject backend
     
     Rectangle {
@@ -38,5 +37,18 @@ ApplicationWindow {
         font.pixelSize: 48
         color: "White"
         }
+    }
+
+    TextArea{
+        anchors {
+                bottom: parent.bottom
+                bottomMargin: 72
+                left: parent.left
+                leftMargin: 12
+                right: parent.right
+                rightMargin: 12
+            } 
+        anchors.margins: 100
+        wrapMode: TextEdit.Wrap
     }
 }
