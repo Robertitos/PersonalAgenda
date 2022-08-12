@@ -47,8 +47,30 @@ ApplicationWindow {
                 leftMargin: 12
                 right: parent.right
                 rightMargin: 12
-            } 
+            }
+        id: txtarea 
         anchors.margins: 100
         wrapMode: TextEdit.Wrap
+    }
+
+    Rectangle{
+        width: 90
+        height: 40
+        color: "#9de1ed"
+        Text{
+            anchors.verticalCenter: parent.verticalCenter 
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "SUBMIT"
+            font.family: "Impact"
+            font.pixelSize: 24
+            color: "#2c646e"
+        }
+        anchors{
+            right: parent.right
+            rightMargin: 12
+            bottom: parent.bottom
+            bottomMargin: 20
+        }
+
     }
 }
